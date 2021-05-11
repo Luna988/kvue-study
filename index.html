@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- <p @click="add">{{counter}}</p> -->
+    <p>{{counter}}</p>
+    <p>{{counter}}</p>
+    <p k-text="counter"></p>
+    <p k-html="desc">111</p>
+    <!-- <input type="text" k-model="desc"> -->
+  </div>
+
+  <script src="./kvue.js"></script>
+  <script>
+    const app = new KVue({
+      el: '#app',
+      data: {
+        counter: 1,
+        desc: '<h1 style="color:red">yyds!</h1>'
+      },
+      methods: {
+        add(){
+          this.counter ++
+        }
+      }
+    })
+
+    // setInterval(() => {
+    //   app.counter++
+    // },1000)
+  </script>
+</body>
+</html>
